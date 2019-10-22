@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>GifTastic</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--Title row-->
+    <div class="row">
+        <div class="col-md-10 offset-1">
+            <h1 class="text-center p-3">SC-FI GIFS!!!!!!!!!!!!</h1>
+        </div>
+    </div>
+    <!--Button row-->
+    <div class="row">
+        <div class="col-md-10">
+            <div id="buttons" class="container-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!--gif and form row-->
+    <div class="row">
+
+        <div class="col-md-8">
+            <!--gif container-->
+            <div id="gifs" class="container-fluid">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <!--form container-->
+            <div id="search-input" class="container">
+                <form id="topic-form">
+                    <label for="topic-input">Find a Sci-Fi gif!</label>
+                    <input type="text" id="topic-input">
+                    <br>
+                    <!-- Submit Button-->
+                    <input id="submit-btn" type="submit" value="Find it!">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
