@@ -5,7 +5,6 @@
     <meta charset="utf-8">
 
     <title>GifTastic</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -13,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="text-white"
+    style="background-attachment: fixed; background-image: url(assets/space.jpg); font-family:'Audiowide', cursive;">
     <!--Title row-->
     <div class="row">
         <div class="col-md-10 offset-1">
@@ -23,7 +23,7 @@
     <!--Button row-->
     <div class="row">
         <div class="col-md-10">
-            <div id="buttons" class="container-fluid">
+            <div id="buttons" class="container-fluid mb-5">
             </div>
         </div>
     </div>
@@ -42,10 +42,10 @@
             <div id="search-input" class="container">
                 <form id="topic-form">
                     <label for="topic-input">Find a Sci-Fi gif!</label>
-                    <input type="text" id="topic-input">
+                    <input type="text" id="topic-input" placeholder="Enter a search term">
                     <br>
                     <!-- Submit Button-->
-                    <input id="submit-btn" type="submit" value="Find it!">
+                    <input id="submit-btn" class="btn btn-outline-light mt-3" type="submit" value="Find it!">
                 </form>
             </div>
         </div>

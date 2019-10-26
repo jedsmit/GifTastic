@@ -11,7 +11,7 @@ $(document).ready(function () {
     function renderButtons() {
         $("#buttons").empty();
         for (var i = 0; i < topics.length; i++) {
-            var a = $("<button>");
+            var a = $("<button>").addClass("btn btn-outline-light m-1");
             a.addClass("topic");
             a.attr("data", topics[i]);
             a.text(topics[i]);
@@ -32,22 +32,23 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             //set variable to hold data object
+            console.log(response)
             var resultsObj = response.data;
             //empty the gifs div
             $("#gifs").empty();
             //iterate through the gif objects in the response to display them and their rating
             for (i = 0; i < resultsObj.length; i++) {
                 //create div for the for gif and rating
-                var gifDiv = $("<div>");
+                var gifDiv = $("<div>").addClass("d-inline-block p-3");
                 //creat div for gif image
                 var imgDiv = $("<img>");
                 //create <p> for the rating
                 var p = $("<p>").text("Rating: " + resultsObj[i].rating);
                 //set attributes for image
                 imgDiv.attr({
-                    "src": resultsObj[i].images.original_still.url, //initial display is a still image
-                    "data-move": resultsObj[i].images.original.url, //url for moving image
-                    "data-still": resultsObj[i].images.original_still.url, //url for still image
+                    "src": resultsObj[i].images.fixed_height_still.url, //initial display is a still image
+                    "data-move": resultsObj[i].images.fixed_height.url, //url for moving image
+                    "data-still": resultsObj[i].images.fixed_height_still.url, //url for still image
                     "data-animate": "no" //animation state 
                 });
                 //puts the image and rating into the gif div
@@ -59,7 +60,7 @@ $(document).ready(function () {
 
         });
     };
-    //function checks if the gif is animated and either naimates it, or stops it
+    //function checks if the gif is animated and either animates it, or stops it
     function animate() {
         if ($(this).attr("data-animate") === "no") {
             $(this).attr({
@@ -73,6 +74,7 @@ $(document).ready(function () {
             });
         };
     };
+
     //call to display initial buttons
     renderButtons();
 
