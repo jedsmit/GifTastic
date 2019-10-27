@@ -80,13 +80,12 @@ $(document).ready(function () {
 
     $("#submit-btn").on("click", function (event) {
         event.preventDefault();
-
-        //This line will grab the text from the input box
+        //Gets text from the search box 
         var topic = $("#topic-input").val().trim();
-        // The movie from the textbox is then added to our array
+        //Adds search term to array     
         topics.push(topic);
 
-        // calling renderButtons which handles the processing of our movie array
+        //renders buttons
         renderButtons();
     });
     //make ajax call and display gifs when a button is clicked
